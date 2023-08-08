@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import data from './data/data.json';
 import NavigationBar from "./Components/NavBar/NavBar";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   console.log(data);
@@ -9,6 +10,7 @@ function App() {
   return (
     <div>
       <NavigationBar/>
+      <Footer/>
     </div>
   );
 }
