@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import './NavBar.css';
+import Logo from '../../Assests/Logo.png';
 
 const NavigationBar = () => {
-  const [activeTab, setActiveTab] = useState('SocialFeed');
+  const [activeTab, setActiveTab] = useState(Logo);
 
   const handleTabClick = (tabName) => {
     setActiveTab(tabName);
@@ -11,7 +12,9 @@ const NavigationBar = () => {
   return (
     <div className='nav'>
       <nav>
-        <h1>Social <span className='feed'>Feed</span></h1>
+        <h1>
+            <img src={Logo} alt="Logo" className='logo'/>
+        </h1>
       </nav>
       {}
       {activeTab === 'Home' && <div>Home Content</div>}

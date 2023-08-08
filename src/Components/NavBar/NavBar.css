@@ -2,11 +2,11 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #082664;
-    height: 70px;
+    background-color: #eaa0ca;
+    height: 80px;
     width: 100%;
-    line-height: 70px;
-    border: 1px  solid rgb(4, 4, 4);
+    line-height: 80px;
+    border: 1px  solid rgb(208, 115, 166);
     color: white;
     padding: 1em;
     font-family: Segoe UI; 
@@ -27,11 +27,8 @@ nav {
     color: #fff;
     cursor: pointer;
   }
-  
-  li.active {
-    background-color: #555;
-  }
-  
-.feed {
-  color: brown; 
+
+.logo {
+  width: 80px; 
+  height: auto;
 }
