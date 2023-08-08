@@ -1,13 +1,14 @@
 import { useState } from "react";
 import "./App.css";
 import data from './data/data.json';
+import NavigationBar from "./Components/NavBar/NavBar";
 
 function App() {
   console.log(data);
   const [allProducts, setAllProducts] = useState(data)
   return (
     <div>
-      <h1>Hello, Student!</h1>
+      <NavigationBar/>
     </div>
   );
 }
