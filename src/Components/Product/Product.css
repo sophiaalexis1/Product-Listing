@@ -1,0 +1,22 @@
+.product {
+    border: 1px solid #5f18ed;
+    padding: 10px;
+    margin: 10px;
+    width: 250px;
+    display: inline-block;
+    text-align: center;
+    box-shadow: px 2px 4px rgba(229, 10, 10, 0.1);
+    font-family: Segoe UI;
+}
+  
+.product img {
+    max-width: 150px;
+    height: 150px;
+}
+  
+.product h3 {
+    margin-top: 10px;
+}
+  
+
+  

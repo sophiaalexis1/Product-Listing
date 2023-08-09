@@ -1,0 +1,15 @@
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+}
+
+.product {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: calc(33.33% - 20px); /* Calculate width for 3 products with margins */
+    box-sizing: border-box; /* Include padding and border in the width */
+    text-align: center;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
