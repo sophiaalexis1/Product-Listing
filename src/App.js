@@ -5,18 +5,32 @@ import ProductList from "./Components/ProductList/ProductList";
 import NavigationBar from "./Components/NavBar/NavBar";
 import Footer from "./Components/Footer/Footer";
 import CategorySelect from "./Components/CategorySelect/CategorySelect";
+import SortToggle from "./Components/SortToggle/SortToggle";
 
 const App = () => {
   const [products, setProducts] = useState(Data.products);
   const [selectedCategory, setSelectedCategory] = useState("");
+  const [sortOrder, setSortOrder] = useState("default");
   
   const handleSelectedCategory = (category) => {
     setSelectedCategory(category);
   };
 
+  const handleSortChange = (e) => {
+    setSortOrder(e.target.value);
+  };
+
   const filteredProducts = selectedCategory
     ? products.filter((product) => product.category === selectedCategory)
     : products; 
+
+  let sortedProducts = [...filteredProducts];
+  
+  if (sortOrder === "asc") {
+    sortedProducts.sort((a, b) => a.title.localeCompare(b.title));
+  } else if (sortOrder === "desc") {
+    sortedProducts.sort((a, b) => b.title.localeCompare(a.title));
+  }
 
   return (
     <div>
@@ -28,7 +42,11 @@ const App = () => {
         selectedCategory={selectedCategory}
         onSelectCategory={handleSelectedCategory}
       />
-      <ProductList products={filteredProducts} />
+      <SortToggle
+        sortOrder={sortOrder}
+        onSortChange={handleSortChange}
+      />
+      <ProductList products={sortedProducts} />
       </div>
       <Footer/>
     </div>
