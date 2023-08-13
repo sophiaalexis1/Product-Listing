@@ -10,29 +10,34 @@ const Product = ({ product }) => {
     const stars = [];
 
     for (let i = 0; i < fullStars; i++) {
-      stars.push(<i key={i} className="fas fa-star"></i>);
+      stars.push(<i key={i} className="fas fa-star gold-star"></i>);
     }
 
     if (halfStar) {
-      stars.push(<i key={fullStars} className="fas fa-star-half-alt"></i>);
+      stars.push(<i key={fullStars} className="fas fa-star-half-alt gold-star"></i>);
     }
 
     const emptyStars = maxRating - stars.length;
 
     for (let i = 0; i < emptyStars; i++) {
-      stars.push(<i key={`empty-${i}`} className="far fa-star"></i>);
+      stars.push(<i key={`empty-${i}`} className="far fa-star gold-star"></i>);
     }
 
     return stars;
+  };
+
+  const stockStyle = {
+    color: product.stock <= 20 ? 'red' : 'initial',
+    fontWeight: product.stock <= 20 ? 'bold' : 'normal',
   };
 
   return (
     <div className="product">
       <img src={product.thumbnail} alt={product.title} />
       <h3>{product.title}</h3>
-      <p>Brand: {product.brand}</p>
-      <p>Category: {product.category}</p>
-      <p>Quantity in Stock: {product.stock}</p>
+      <p className='brand'>{product.brand}</p>
+      <p className='category'>{product.category}</p>
+      <p style={stockStyle}>{product.stock}</p>
       <div className="rating">{renderRatingStars(product.rating)}</div>
     </div>
   );

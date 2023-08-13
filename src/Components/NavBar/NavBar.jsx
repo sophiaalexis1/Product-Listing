@@ -17,9 +17,6 @@ const NavigationBar = () => {
         </h1>
       </nav>
       {}
-      {activeTab === 'Home' && <div>Home Content</div>}
-      {activeTab === 'About' && <div>About Content</div>}
-      {activeTab === 'Contact' && <div>Contact Content</div>}
     </div>
   );
 };

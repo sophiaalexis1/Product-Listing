@@ -7,6 +7,7 @@ const CategorySelect = ({products, selectedCategory, onSelectCategory}) => {
         <div className="category-select">
             <label htmlFor="category">Select Category:</label>
             <select
+                className="drop-content"
                 id="category"
                 value={selectedCategory}
                 onChange={(e) => onSelectCategory(e.target.value)}

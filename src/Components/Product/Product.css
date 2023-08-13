@@ -1,11 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+
 .product {
-    border: 1px solid #5f18ed;
+    border: 1px solid #f7f6f9;
     padding: 10px;
     margin: 10px;
-    width: 250px;
+    width: 380px;
     display: inline-block;
     text-align: center;
-    box-shadow: px 2px 4px rgba(229, 10, 10, 0.1);
+    box-shadow: 0 2px 7px #dfdfdf;
     font-family: Segoe UI;
 }
   
@@ -17,6 +19,16 @@
 .product h3 {
     margin-top: 10px;
 }
-  
 
+.gold-star {
+    color: gold;
+}
+
+.brand {
+    color: grey;
+}
+
+.category {
+    color: grey;
+}
   
